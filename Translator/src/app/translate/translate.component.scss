@@ -1,0 +1,36 @@
+.form {
+  display: grid;
+  grid-gap: 1rem;
+  padding: 1rem;
+  //color: red;
+
+  grid-template-columns: 1fr;
+  @media screen and (min-width: 37.5em) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.language {
+  &__text {
+    @media screen and (min-width: 37.5em) {
+      grid-row: 2;
+    }
+  }
+
+  &__translation {
+    @media screen and (min-width: 37.5em) {
+      grid-row: 2;
+    }
+  }
+}
+
+.btn {
+  @media screen and (min-width: 37.5em) {
+    grid-row: 3;
+    grid-column: span 2;
+  }
+}
+
+.textarea__height {
+  height: 6.2rem !important;
+}

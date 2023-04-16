@@ -6,7 +6,7 @@ COPY ./package*.json ./
 RUN npm ci
 
 COPY ./ ./
-RUN npm run prod
+RUN ./node_modules/.bin/ng build -c production
 
 FROM nginx:1.23.0-alpine
 EXPOSE 8080
